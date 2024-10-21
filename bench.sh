@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
-#
-# Description: A Bench Script by Teddysun
-#
-# Copyright (C) 2015 - 2023 Teddysun <i@teddysun.com>
-# Thanks: LookBack <admin@dwhd.org>
-# URL: https://teddysun.com/444.html
-# https://github.com/teddysun/across/blob/master/bench.sh
-#
+
 trap _exit INT QUIT TERM
 
 _red() {
@@ -416,6 +409,7 @@ fi
 [[ -z "$ipv4_check" ]] && online="$(_red "\xe2\x9c\x97 Offline")" || online="$(_green "\xe2\x9c\x93 Online")"
 [[ -z "$ipv6_check" ]] && online+=" / $(_red "\xe2\x9c\x97 Offline")" || online+=" / $(_green "\xe2\x9c\x93 Online")"
 start_time=$(date +%s)
+
 get_system_info
 check_virt
 clear
